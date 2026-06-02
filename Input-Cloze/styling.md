@@ -1,6 +1,6 @@
 # CSS
 
-'''
+```css
 /* 全局基础与卡片盒 */
 .card {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -142,4 +142,4 @@
   display: inline-block !important;
   vertical-align: middle;
 }
-'''
+```
