@@ -61,13 +61,14 @@
   displayBox.addEventListener('input', function(e) {
     if (e.target.classList.contains('custom-type-input')) {
       const idx = e.target.getAttribute('data-index');
-      sessionStorage.setItem('anki_type_' + idx, e.target.value);
+		  sessionStorage.setItem('anki_type_' + idx, e.target.value);
     }
   });
 
   // 自动聚焦第一个输入框
   const firstInput = displayBox.querySelector('.custom-type-input');
   if (firstInput) firstInput.focus();
+	sessionStorage.setItem('currentCardNum' , currentCardNum);
 })();
 </script>
 ```
