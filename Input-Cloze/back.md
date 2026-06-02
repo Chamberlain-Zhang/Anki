@@ -25,12 +25,7 @@
   const rawAnswerHtml = document.getElementById('raw-answer').innerHTML;
   const displayBox = document.getElementById('display-content');
   
-  let currentCardNum = 1;
-  const cardClass = document.body.className;
-  const matchNum = cardClass.match(/card(\d+)/);
-  if (matchNum) {
-    currentCardNum = parseInt(matchNum[1]);
-  }
+  let currentCardNum = parseInt((sessionStorage.getItem('currentCardNum') || '').trim());
 
   // 逐字比对算法
   function diffStrings(user, correct) {
@@ -88,6 +83,7 @@
     if (hint && hint.trim()) {
       resultHtml += `<span class="cloze-hint-badge">(${hint.trim()})</span>`;
     }
+sessionStorage.removeItem('currentCardNum');
     return resultHtml;
   });
 
