@@ -27,7 +27,7 @@
   
   let currentCardNum = 1;
   const cardClass = document.body.className;
-  const matchNum = cardClass.match(/cloze-(\d+)/);
+  const matchNum = cardClass.match(/card(\d+)/);
   if (matchNum) {
     currentCardNum = parseInt(matchNum[1]);
   }
