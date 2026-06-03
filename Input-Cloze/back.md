@@ -7,6 +7,10 @@
     <div class="unit-badge">Unit {{Unit Number}}:{{Unit Subject}}</div>
   {{/Unit Number}}
 
+  {{#Topics}}
+    <div class="topics-badge">{{Topics}}</div>
+  {{/Topics}}
+
   <div id="raw-answer" style="display:none;">{{Text}}</div>
 
   <div id="display-content" class="content-box"></div>
